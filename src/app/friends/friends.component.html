@@ -1,0 +1,44 @@
+<h1>
+  <p [ngStyle]="{ 'font-size': title === 'Header' ? '48px' : '50px' }">
+    {{ title }}
+  </p>
+</h1>
+
+<!--
+<span *ngIf="friendsExist === true">
+  <table>
+    <tr *ngFor="let myfriend of listOfFriend">
+      <td>{{ myfriend.id }}</td>
+      <td>{{ myfriend.name }}</td>
+      <td>{{ myfriend.age }}</td>
+      <td>{{ myfriend.nationality }}</td>
+    </tr>
+  </table>
+</span>
+-->
+
+<span *ngIf="friendsExist == false">
+  <h1>I dont have friend at the moment</h1>
+</span>
+
+<span *ngIf="friendsExist === true">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SN</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Nationality</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let myfriend of listOfFriend">
+        <th scope="row">1</th>
+        <td>{{ myfriend.id }}</td>
+        <td>{{ myfriend.name }}</td>
+        <td>{{ myfriend.age }}</td>
+        <td>{{ myfriend.nationality }}</td>
+      </tr>
+    </tbody>
+  </table>
+</span>
